@@ -14,6 +14,11 @@
 		533E4E3D287F0E3D00E7D112 /* TT_LBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E3C287F0E3D00E7D112 /* TT_LBCTests.swift */; };
 		533E4E47287F0E3D00E7D112 /* TT_LBCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E46287F0E3D00E7D112 /* TT_LBCUITests.swift */; };
 		533E4E49287F0E3D00E7D112 /* TT_LBCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E48287F0E3D00E7D112 /* TT_LBCUITestsLaunchTests.swift */; };
+		533E4E62287F19A000E7D112 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E5D287F19A000E7D112 /* BaseViewController.swift */; };
+		533E4E63287F19A000E7D112 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E5E287F19A000E7D112 /* ViewModel.swift */; };
+		533E4E64287F19A000E7D112 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E5F287F19A000E7D112 /* Interactor.swift */; };
+		533E4E65287F19A000E7D112 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E60287F19A000E7D112 /* Presenter.swift */; };
+		533E4E66287F19A000E7D112 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E61287F19A000E7D112 /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		533E4E42287F0E3D00E7D112 /* TT_LBCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TT_LBCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		533E4E46287F0E3D00E7D112 /* TT_LBCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TT_LBCUITests.swift; sourceTree = "<group>"; };
 		533E4E48287F0E3D00E7D112 /* TT_LBCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TT_LBCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		533E4E5D287F19A000E7D112 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		533E4E5E287F19A000E7D112 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		533E4E5F287F19A000E7D112 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		533E4E60287F19A000E7D112 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		533E4E61287F19A000E7D112 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 			children = (
 				533E4E5A287F177500E7D112 /* App */,
 				533E4E59287F176C00E7D112 /* Modules */,
+				533E4E5C287F198F00E7D112 /* Helpers */,
 				533E4E58287F174C00E7D112 /* Resources */,
 			);
 			path = TT_LBC;
@@ -143,6 +154,26 @@
 				533E4E30287F0E3D00E7D112 /* LaunchScreen.storyboard */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		533E4E5C287F198F00E7D112 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				533E4E67287F19E400E7D112 /* Architecture */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		533E4E67287F19E400E7D112 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				533E4E5D287F19A000E7D112 /* BaseViewController.swift */,
+				533E4E5E287F19A000E7D112 /* ViewModel.swift */,
+				533E4E5F287F19A000E7D112 /* Interactor.swift */,
+				533E4E60287F19A000E7D112 /* Presenter.swift */,
+				533E4E61287F19A000E7D112 /* LoaderView.swift */,
+			);
+			path = Architecture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533E4E65287F19A000E7D112 /* Presenter.swift in Sources */,
 				533E4E26287F0E3C00E7D112 /* AppDelegate.swift in Sources */,
 				533E4E28287F0E3C00E7D112 /* SceneDelegate.swift in Sources */,
+				533E4E66287F19A000E7D112 /* LoaderView.swift in Sources */,
+				533E4E64287F19A000E7D112 /* Interactor.swift in Sources */,
+				533E4E63287F19A000E7D112 /* ViewModel.swift in Sources */,
+				533E4E62287F19A000E7D112 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
