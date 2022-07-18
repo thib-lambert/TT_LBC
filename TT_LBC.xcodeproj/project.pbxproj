@@ -32,6 +32,7 @@
 		539D8648288592A500E2686A /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D8647288592A500E2686A /* UIColor+Colors.swift */; };
 		539D864A28859A9500E2686A /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864928859A9500E2686A /* Log.swift */; };
 		539D864C28859B5400E2686A /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864B28859B5400E2686A /* Date+String.swift */; };
+		53AE6B472885FB0B007AC0E7 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AE6B462885FB0B007AC0E7 /* PaddingLabel.swift */; };
 		53AE6B4928860153007AC0E7 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AE6B4828860153007AC0E7 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		539D8647288592A500E2686A /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		539D864928859A9500E2686A /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		539D864B28859B5400E2686A /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		53AE6B462885FB0B007AC0E7 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		53AE6B4828860153007AC0E7 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +197,7 @@
 				539D862C28855CA300E2686A /* Protocols */,
 				539D862728855A7E00E2686A /* APIManager.swift */,
 				539D864928859A9500E2686A /* Log.swift */,
+				53AE6B462885FB0B007AC0E7 /* PaddingLabel.swift */,
 				53AE6B4828860153007AC0E7 /* AsyncImageView.swift */,
 			);
 			path = Helpers;
@@ -410,6 +413,7 @@
 				539D864A28859A9500E2686A /* Log.swift in Sources */,
 				539D8648288592A500E2686A /* UIColor+Colors.swift in Sources */,
 				539D8621288558D600E2686A /* URL+Optional.swift in Sources */,
+				53AE6B472885FB0B007AC0E7 /* PaddingLabel.swift in Sources */,
 				539D862628855A5100E2686A /* NetworkError.swift in Sources */,
 				539D862828855A7E00E2686A /* APIManager.swift in Sources */,
 				53AE6B4928860153007AC0E7 /* AsyncImageView.swift in Sources */,
