@@ -26,6 +26,9 @@
 		539D862628855A5100E2686A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D862528855A5100E2686A /* NetworkError.swift */; };
 		539D862828855A7E00E2686A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D862728855A7E00E2686A /* APIManager.swift */; };
 		539D862B28855C9E00E2686A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D862A28855C9E00E2686A /* Category.swift */; };
+		539D862E28855E2900E2686A /* PostsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D862D28855E2900E2686A /* PostsWorker.swift */; };
+		539D863028855EA100E2686A /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D862F28855EA100E2686A /* PostResponse.swift */; };
+		539D863228855EB900E2686A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D863128855EB900E2686A /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		539D862528855A5100E2686A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		539D862728855A7E00E2686A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		539D862A28855C9E00E2686A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		539D862D28855E2900E2686A /* PostsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsWorker.swift; sourceTree = "<group>"; };
+		539D862F28855EA100E2686A /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
+		539D863128855EB900E2686A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				538D24FD287F31D7000E88AC /* CategoryResponse.swift */,
+				539D862F28855EA100E2686A /* PostResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				538D24FB287F2D35000E88AC /* CategoriesWorker.swift */,
+				539D862D28855E2900E2686A /* PostsWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				539D862A28855C9E00E2686A /* Category.swift */,
+				539D863128855EB900E2686A /* Post.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -377,7 +386,9 @@
 			files = (
 				533E4E65287F19A000E7D112 /* Presenter.swift in Sources */,
 				538D24FC287F2D35000E88AC /* CategoriesWorker.swift in Sources */,
+				539D863028855EA100E2686A /* PostResponse.swift in Sources */,
 				533E4E26287F0E3C00E7D112 /* AppDelegate.swift in Sources */,
+				539D863228855EB900E2686A /* Post.swift in Sources */,
 				533E4E28287F0E3C00E7D112 /* SceneDelegate.swift in Sources */,
 				533E4E66287F19A000E7D112 /* LoaderView.swift in Sources */,
 				539D86232885590900E2686A /* Decodable+Decode.swift in Sources */,
@@ -387,6 +398,7 @@
 				539D862628855A5100E2686A /* NetworkError.swift in Sources */,
 				539D862828855A7E00E2686A /* APIManager.swift in Sources */,
 				533E4E62287F19A000E7D112 /* BaseViewController.swift in Sources */,
+				539D862E28855E2900E2686A /* PostsWorker.swift in Sources */,
 				538D24FE287F31D7000E88AC /* CategoryResponse.swift in Sources */,
 				539D862B28855C9E00E2686A /* Category.swift in Sources */,
 			);
