@@ -17,8 +17,7 @@ extension Decodable {
 				let object: Self = try JSONDecoder().decode(Self.self, from: jsonData)
 				return object
 			} catch {
-				// TODO: - Add logs
-				print(error)
+				Log.error(error)
 				throw error
 			}
 		} else {

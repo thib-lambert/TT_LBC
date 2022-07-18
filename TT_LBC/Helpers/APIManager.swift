@@ -18,9 +18,13 @@ class APIManager {
 	// MARK: - Fetch
 	func fetch<T: Decodable>(type: T.Type, from url: URL?) async throws -> T {
 		guard let _url = url else {
-			throw NetworkError.invalidUrl
+			let error = NetworkError.invalidUrl
+			
+			Log.error(error)
+			throw error
 		}
 		
+		Log.network(.sending, url: _url.absoluteString)
 		return try await withCheckedThrowingContinuation { continuation in
 			let task = URLSession.shared.dataTask(with: _url) { data, response, error in
 				if let error = error {
@@ -29,15 +33,20 @@ class APIManager {
 				}
 				
 				guard let data = data else {
-					continuation.resume(throwing: NetworkError.invalidData)
+					let error = NetworkError.invalidData
+					
+					Log.network(.error, url: _url.absoluteString, error: error)
+					continuation.resume(throwing: error)
 					return
 				}
 				
 				do {
 					let jsonResponse = try T.decode(from: data)
+					
+					Log.network(.success, url: _url.absoluteString)
 					continuation.resume(returning: jsonResponse)
 				} catch {
-					// TODO: - add logs
+					Log.network(.error, url: _url.absoluteString, error: error)
 					continuation.resume(throwing: error)
 				}
 			}

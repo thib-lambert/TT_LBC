@@ -29,6 +29,8 @@
 		539D862E28855E2900E2686A /* PostsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D862D28855E2900E2686A /* PostsWorker.swift */; };
 		539D863028855EA100E2686A /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D862F28855EA100E2686A /* PostResponse.swift */; };
 		539D863228855EB900E2686A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D863128855EB900E2686A /* Post.swift */; };
+		539D864A28859A9500E2686A /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864928859A9500E2686A /* Log.swift */; };
+		539D864C28859B5400E2686A /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864B28859B5400E2686A /* Date+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		539D862D28855E2900E2686A /* PostsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsWorker.swift; sourceTree = "<group>"; };
 		539D862F28855EA100E2686A /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		539D863128855EB900E2686A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		539D864928859A9500E2686A /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		539D864B28859B5400E2686A /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 				539D861F288558C300E2686A /* Extensions */,
 				539D862C28855CA300E2686A /* Protocols */,
 				539D862728855A7E00E2686A /* APIManager.swift */,
+				539D864928859A9500E2686A /* Log.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 		539D861F288558C300E2686A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				539D864B28859B5400E2686A /* Date+String.swift */,
 				539D86222885590900E2686A /* Decodable+Decode.swift */,
 				539D8620288558D600E2686A /* URL+Optional.swift */,
 			);
@@ -393,7 +399,9 @@
 				533E4E66287F19A000E7D112 /* LoaderView.swift in Sources */,
 				539D86232885590900E2686A /* Decodable+Decode.swift in Sources */,
 				533E4E64287F19A000E7D112 /* Interactor.swift in Sources */,
+				539D864C28859B5400E2686A /* Date+String.swift in Sources */,
 				533E4E63287F19A000E7D112 /* ViewModel.swift in Sources */,
+				539D864A28859A9500E2686A /* Log.swift in Sources */,
 				539D8621288558D600E2686A /* URL+Optional.swift in Sources */,
 				539D862628855A5100E2686A /* NetworkError.swift in Sources */,
 				539D862828855A7E00E2686A /* APIManager.swift in Sources */,
