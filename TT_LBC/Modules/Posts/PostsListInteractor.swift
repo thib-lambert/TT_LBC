@@ -1,0 +1,41 @@
+//  PostsListInteractor.swift
+//
+//  Created by Thibaud Lambert on 18/07/2022.
+//
+
+class PostsListInteractor: Interactor
+<
+	PostsListViewModel,
+	PostsListPresenter
+> {
+	
+	// MARK: - Worker
+	private let categoriesWorker = CategoriesWorker()
+	private let postsWorker = PostsWorker()
+	
+	// MARK: - Refresh
+	func refresh(withLoader: Bool) {
+		if withLoader {
+			self.presenter.display(loader: true)
+		}
+		
+		Task {
+			do {
+				async let categories = self.categoriesWorker.fetch()
+				async let posts = self.postsWorker.fetch()
+				
+				try await self.presenter.display(categories: categories,
+									   posts: posts)
+				
+				if withLoader {
+					self.presenter.display(loader: false)
+				}
+			} catch {
+				Log.error(error)
+				if withLoader {
+					self.presenter.display(loader: false)
+				}
+			}
+		}
+	}
+}
