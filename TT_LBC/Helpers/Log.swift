@@ -31,27 +31,31 @@ class Log {
 		case sending
 		case success
 		case error
+		case downloadStart
+		case downloadStop
 		
 		var prefix: String {
 			switch self {
 			case .sending: return "➡️"
 			case .success: return "✅"
 			case .error: return "❌"
+			case .downloadStart: return "📥▶️"
+			case .downloadStop: return "📥⏹️"
 			}
 		}
 	}
 	
 	// MARK: - Helpers
-	private static func show(_ type: LogType,
-					 _ object: Any? = nil,
+	 private static func show(_ type: LogType,
+							 _ message: String?,
 					 error: Error? = nil) {
 		var messages: [String?] = []
 		
 		let date = Date().toString(format: "MM-dd-yyyy HH:mm:ss", locale: Locale(identifier: "en"))
 		messages.append("\(date) ~ \(type.prefix) -")
 		
-		if let object = object {
-			messages.append("\(String(describing: object))")
+		if let message = message {
+			messages.append(message)
 		}
 		
 		if let error: Error = error {
@@ -61,15 +65,15 @@ class Log {
 		print(messages.compactMap { $0 }.joined(separator: " "))
 	}
 	
-	static func error(_ error: Error) {
+	static func error(_ error: Error?) {
 		Self.show(DefaultLogType.debug, nil, error: error)
 	}
 	
-	static func debug(_ object: Any) {
-		Self.show(DefaultLogType.debug, object, error: nil)
+	static func debug(_ message: String?) {
+		Self.show(DefaultLogType.debug, message, error: nil)
 	}
 	
-	static func network(_ type: NetworkLogType, url: String, error: Error? = nil) {
+	static func network(_ type: NetworkLogType, url: String?, error: Error? = nil) {
 		Self.show(type, url, error: error)
 	}
 }

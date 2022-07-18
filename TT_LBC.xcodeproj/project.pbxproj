@@ -32,6 +32,7 @@
 		539D8648288592A500E2686A /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D8647288592A500E2686A /* UIColor+Colors.swift */; };
 		539D864A28859A9500E2686A /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864928859A9500E2686A /* Log.swift */; };
 		539D864C28859B5400E2686A /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864B28859B5400E2686A /* Date+String.swift */; };
+		53AE6B4928860153007AC0E7 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AE6B4828860153007AC0E7 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		539D8647288592A500E2686A /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		539D864928859A9500E2686A /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		539D864B28859B5400E2686A /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		53AE6B4828860153007AC0E7 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				539D862C28855CA300E2686A /* Protocols */,
 				539D862728855A7E00E2686A /* APIManager.swift */,
 				539D864928859A9500E2686A /* Log.swift */,
+				53AE6B4828860153007AC0E7 /* AsyncImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				539D8621288558D600E2686A /* URL+Optional.swift in Sources */,
 				539D862628855A5100E2686A /* NetworkError.swift in Sources */,
 				539D862828855A7E00E2686A /* APIManager.swift in Sources */,
+				53AE6B4928860153007AC0E7 /* AsyncImageView.swift in Sources */,
 				533E4E62287F19A000E7D112 /* BaseViewController.swift in Sources */,
 				539D862E28855E2900E2686A /* PostsWorker.swift in Sources */,
 				538D24FE287F31D7000E88AC /* CategoryResponse.swift in Sources */,
