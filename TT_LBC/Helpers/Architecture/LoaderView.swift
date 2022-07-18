@@ -7,6 +7,15 @@ import UIKit
 
 class LoaderView: UIView {
 	
+	// MARK: - UI
+	private lazy var activityIndicator: UIActivityIndicatorView = {
+		let view = UIActivityIndicatorView(style: .large)
+		view.color = .blazeOrange
+		view.translatesAutoresizingMaskIntoConstraints = false
+		
+		return view
+	}()
+	
 	// MARK: - Init
 	override init(frame: CGRect) {
 		super.init(frame: .zero)
@@ -20,14 +29,23 @@ class LoaderView: UIView {
 		self.setup()
 	}
 	
-	func setup() { }
+	func setup() {
+		self.addSubview(self.activityIndicator)
+		
+		NSLayoutConstraint.activate([
+			self.activityIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+			self.activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+		])
+	}
 	
 	// MARK: - Functions
 	func play() {
+		self.activityIndicator.startAnimating()
 		self.isHidden = false
 	}
 	
 	func stop() {
+		self.activityIndicator.stopAnimating()
 		self.isHidden = true
 	}
 }

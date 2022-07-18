@@ -16,6 +16,7 @@ class BaseViewController
 	UIViewController {
 	
 	// MARK: - Variables
+	override var preferredStatusBarStyle: UIStatusBarStyle { .darkContent }
 	
 	// MARK: Clean Archi
 	var viewModel = V() {
@@ -41,10 +42,20 @@ class BaseViewController
 		print("💀 Deinit \(String(describing: self))")
 	}
 	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.setup()
+	}
+	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		
 		self.stopLoading()
+	}
+	
+	func setup() {
+		self.view.backgroundColor = .white
 	}
 	
 	// MARK: - Configure viewModel
