@@ -39,6 +39,8 @@ class PostsListViewController: BaseViewController
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.title = "Liste"
+		
 		self.interactor.refresh(withLoader: true)
 	}
 	
@@ -110,6 +112,11 @@ extension PostsListViewController: UITableViewDataSource {
 extension PostsListViewController: UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		// TODO: - Go to details
+		guard let id = self.viewModel.items[safe: indexPath.row]?.id else { return }
+		
+		let details = PostDetailsViewController()
+		details.postId = id
+		
+		self.show(details, sender: nil)
 	}
 }

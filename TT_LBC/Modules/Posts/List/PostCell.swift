@@ -78,28 +78,7 @@ class PostCell: UITableViewCell {
 		return label
 	}()
 	
-	private lazy var importantLabel: PaddingLabel = {
-		let label = PaddingLabel()
-		label.font = .boldSystemFont(ofSize: 14)
-		label.minimumScaleFactor = 0.75
-		label.adjustsFontSizeToFitWidth = true
-		label.textColor = .white
-		label.translatesAutoresizingMaskIntoConstraints = false
-		label.backgroundColor = .blazeOrange
-		label.text = "IMPORTANT"
-		label.updateAllCorners(with: 4)
-		label.textAlignment = .center
-		label.layer.cornerRadius = 4
-		label.layer.masksToBounds = true
-		label.layer.maskedCorners = [
-			.layerMinXMinYCorner,
-			.layerMaxXMinYCorner,
-			.layerMinXMaxYCorner,
-			.layerMaxXMaxYCorner
-		]
-		
-		return label
-	}()
+	private let urgentLabel = UrgentLabel()
 	
 	// MARK: - Variables
 	var item: PostsListViewModel.Item! {
@@ -108,7 +87,7 @@ class PostCell: UITableViewCell {
 			self.titleLabel.text = self.item.title
 			self.categoryLabel.text = self.item.category
 			self.priceLabel.text = self.item.price
-			self.importantLabel.isHidden = !self.item.isImportant
+			self.urgentLabel.isHidden = !self.item.isImportant
 			self.wrapper.layer.borderColor = self.item.isImportant ? UIColor.blazeOrange.cgColor : UIColor.lightSlateGrey.cgColor
 		}
 	}
@@ -136,7 +115,7 @@ class PostCell: UITableViewCell {
 		
 		self.wrapper.addSubview(self.asyncImageView)
 		self.wrapper.addSubview(self.stackView)
-		self.wrapper.addSubview(self.importantLabel)
+		self.wrapper.addSubview(self.urgentLabel)
 		
 		self.contentView.addSubview(self.wrapper)
 		
@@ -161,10 +140,10 @@ class PostCell: UITableViewCell {
 			self.stackView.leadingAnchor.constraint(equalTo: self.asyncImageView.trailingAnchor, constant: 4),
 			
 			// Important
-			self.importantLabel.topAnchor.constraint(equalTo: self.wrapper.topAnchor, constant: 4),
-			self.wrapper.bottomAnchor.constraint(greaterThanOrEqualTo: self.importantLabel.bottomAnchor, constant: 4),
-			self.importantLabel.leadingAnchor.constraint(equalTo: self.wrapper.leadingAnchor, constant: 4),
-			self.wrapper.trailingAnchor.constraint(greaterThanOrEqualTo: self.importantLabel.trailingAnchor, constant: 4)
+			self.urgentLabel.topAnchor.constraint(equalTo: self.wrapper.topAnchor, constant: 4),
+			self.wrapper.bottomAnchor.constraint(greaterThanOrEqualTo: self.urgentLabel.bottomAnchor, constant: 4),
+			self.urgentLabel.leadingAnchor.constraint(equalTo: self.wrapper.leadingAnchor, constant: 4),
+			self.wrapper.trailingAnchor.constraint(greaterThanOrEqualTo: self.urgentLabel.trailingAnchor, constant: 4)
 		])
 	}
 	

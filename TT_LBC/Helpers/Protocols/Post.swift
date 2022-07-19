@@ -10,7 +10,7 @@ import Foundation
 protocol Post {
 	
 	var id: Int { get }
-	var category: Int { get }
+	var categoryId: Int { get }
 	var title: String { get }
 	var description: String { get }
 	var price: Double { get }

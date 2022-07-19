@@ -35,6 +35,12 @@ class AsyncImageView: UIView {
 		}
 	}
 	
+	override var contentMode: UIView.ContentMode {
+		didSet {
+			self.imageView.contentMode = self.contentMode
+		}
+	}
+	
 	// MARK: - Init
 	override init(frame: CGRect) {
 		super.init(frame: .zero)

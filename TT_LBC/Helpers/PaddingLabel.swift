@@ -24,12 +24,4 @@ class PaddingLabel: UILabel {
 		
 		return intrinsicSuperViewContentSize
 	}
-	
-	// MARK: - Helpers
-	func updateAllCorners(with value: CGFloat) {
-		self.topInset = value
-		self.bottomInset = value
-		self.leadingInset = value
-		self.traillingInset = value
-	}
 }

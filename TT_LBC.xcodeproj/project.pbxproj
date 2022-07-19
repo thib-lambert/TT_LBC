@@ -39,6 +39,11 @@
 		539D864C28859B5400E2686A /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864B28859B5400E2686A /* Date+String.swift */; };
 		539D864E2885A60500E2686A /* Double+Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864D2885A60500E2686A /* Double+Price.swift */; };
 		539D86502885B0A900E2686A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864F2885B0A900E2686A /* PostCell.swift */; };
+		53AAD3D92886A77F005A1284 /* PostDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AAD3D52886A77F005A1284 /* PostDetailsPresenter.swift */; };
+		53AAD3DA2886A77F005A1284 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AAD3D62886A77F005A1284 /* PostDetailsViewController.swift */; };
+		53AAD3DB2886A77F005A1284 /* PostDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AAD3D72886A77F005A1284 /* PostDetailsInteractor.swift */; };
+		53AAD3DC2886A77F005A1284 /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AAD3D82886A77F005A1284 /* PostDetailsViewModel.swift */; };
+		53AAD3DE2886BA60005A1284 /* UrgentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AAD3DD2886BA60005A1284 /* UrgentLabel.swift */; };
 		53AE6B472885FB0B007AC0E7 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AE6B462885FB0B007AC0E7 /* PaddingLabel.swift */; };
 		53AE6B4928860153007AC0E7 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AE6B4828860153007AC0E7 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +102,11 @@
 		539D864B28859B5400E2686A /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		539D864D2885A60500E2686A /* Double+Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Price.swift"; sourceTree = "<group>"; };
 		539D864F2885B0A900E2686A /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		53AAD3D52886A77F005A1284 /* PostDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenter.swift; sourceTree = "<group>"; };
+		53AAD3D62886A77F005A1284 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		53AAD3D72886A77F005A1284 /* PostDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsInteractor.swift; sourceTree = "<group>"; };
+		53AAD3D82886A77F005A1284 /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
+		53AAD3DD2886BA60005A1284 /* UrgentLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrgentLabel.swift; sourceTree = "<group>"; };
 		53AE6B462885FB0B007AC0E7 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		53AE6B4828860153007AC0E7 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +224,7 @@
 				539D864928859A9500E2686A /* Log.swift */,
 				53AE6B462885FB0B007AC0E7 /* PaddingLabel.swift */,
 				53AE6B4828860153007AC0E7 /* AsyncImageView.swift */,
+				53AAD3DD2886BA60005A1284 /* UrgentLabel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -289,13 +300,33 @@
 		539D863C28858A8100E2686A /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				53AAD3D42886A748005A1284 /* Details */,
+				53AAD3D32886A748005A1284 /* List */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		53AAD3D32886A748005A1284 /* List */ = {
+			isa = PBXGroup;
+			children = (
 				539D864028858A9000E2686A /* PostsListViewModel.swift */,
 				539D863D28858A9000E2686A /* PostsListPresenter.swift */,
 				539D863F28858A9000E2686A /* PostsListInteractor.swift */,
 				539D863E28858A9000E2686A /* PostsListViewController.swift */,
 				539D864F2885B0A900E2686A /* PostCell.swift */,
 			);
-			path = Posts;
+			path = List;
+			sourceTree = "<group>";
+		};
+		53AAD3D42886A748005A1284 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				53AAD3D82886A77F005A1284 /* PostDetailsViewModel.swift */,
+				53AAD3D52886A77F005A1284 /* PostDetailsPresenter.swift */,
+				53AAD3D72886A77F005A1284 /* PostDetailsInteractor.swift */,
+				53AAD3D62886A77F005A1284 /* PostDetailsViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,8 +484,10 @@
 				539D864328858A9000E2686A /* PostsListInteractor.swift in Sources */,
 				533E4E65287F19A000E7D112 /* Presenter.swift in Sources */,
 				538D24FC287F2D35000E88AC /* CategoriesWorker.swift in Sources */,
+				53AAD3D92886A77F005A1284 /* PostDetailsPresenter.swift in Sources */,
 				539D863028855EA100E2686A /* PostResponse.swift in Sources */,
 				533E4E26287F0E3C00E7D112 /* AppDelegate.swift in Sources */,
+				53AAD3DA2886A77F005A1284 /* PostDetailsViewController.swift in Sources */,
 				539D86502885B0A900E2686A /* PostCell.swift in Sources */,
 				539D863228855EB900E2686A /* Post.swift in Sources */,
 				539D864428858A9000E2686A /* PostsListViewModel.swift in Sources */,
@@ -469,7 +502,9 @@
 				533E4E63287F19A000E7D112 /* ViewModel.swift in Sources */,
 				539D864A28859A9500E2686A /* Log.swift in Sources */,
 				539D8648288592A500E2686A /* UIColor+Colors.swift in Sources */,
+				53AAD3DE2886BA60005A1284 /* UrgentLabel.swift in Sources */,
 				539D8621288558D600E2686A /* URL+Optional.swift in Sources */,
+				53AAD3DC2886A77F005A1284 /* PostDetailsViewModel.swift in Sources */,
 				53AE6B472885FB0B007AC0E7 /* PaddingLabel.swift in Sources */,
 				539D862628855A5100E2686A /* NetworkError.swift in Sources */,
 				539D862828855A7E00E2686A /* APIManager.swift in Sources */,
@@ -477,6 +512,7 @@
 				533E4E62287F19A000E7D112 /* BaseViewController.swift in Sources */,
 				539D864128858A9000E2686A /* PostsListPresenter.swift in Sources */,
 				539D862E28855E2900E2686A /* PostsWorker.swift in Sources */,
+				53AAD3DB2886A77F005A1284 /* PostDetailsInteractor.swift in Sources */,
 				538D24FE287F31D7000E88AC /* CategoryResponse.swift in Sources */,
 				539D862B28855C9E00E2686A /* Category.swift in Sources */,
 			);

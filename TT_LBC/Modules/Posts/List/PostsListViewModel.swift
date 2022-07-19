@@ -9,6 +9,7 @@ class PostsListViewModel: ViewModel {
 	
 	struct Item {
 		
+		let id: Int
 		let title: String
 		let image: URL?
 		let category: String

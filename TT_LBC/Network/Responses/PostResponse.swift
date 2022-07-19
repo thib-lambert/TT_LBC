@@ -18,7 +18,7 @@ struct PostResponse: Decodable, Post {
 	enum CodingKeys: String, CodingKey {
 		
 		case id
-		case category = "category_id"
+		case categoryId = "category_id"
 		case title, description, price
 		case images = "images_url"
 		case creationDate = "creation_date"
@@ -28,7 +28,7 @@ struct PostResponse: Decodable, Post {
 	private let images: Images?
 	
 	var id: Int
-	var category: Int
+	var categoryId: Int
 	var title: String
 	var description: String
 	var price: Double
