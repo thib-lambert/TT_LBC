@@ -21,7 +21,6 @@ extension Decodable {
 				throw error
 			}
 		} else {
-			// TODO: - Update this error
 			throw NetworkError.invalidData
 		}
 	}

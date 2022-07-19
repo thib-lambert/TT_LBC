@@ -26,7 +26,7 @@ class APIManager {
 		
 		Log.network(.sending, url: _url.absoluteString)
 		return try await withCheckedThrowingContinuation { continuation in
-			let task = URLSession.shared.dataTask(with: _url) { data, response, error in
+			let task = URLSession.shared.dataTask(with: _url) { data, _, error in
 				if let error = error {
 					continuation.resume(throwing: error)
 					return

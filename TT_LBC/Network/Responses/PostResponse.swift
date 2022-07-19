@@ -39,4 +39,3 @@ struct PostResponse: Decodable, Post {
 		URL(self.images?.thumb ?? self.images?.small)
 	}
 }
-

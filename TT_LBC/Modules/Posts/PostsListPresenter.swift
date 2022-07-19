@@ -17,6 +17,4 @@ class PostsListPresenter: Presenter<PostsListViewModel> {
 		
 		self.viewModel?.send()
 	}
-	
-	
 }

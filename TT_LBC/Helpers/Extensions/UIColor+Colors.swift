@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// swiftlint:disable:file force_unwrapping
 extension UIColor {
 	
 	static let blazeOrange = UIColor(named: "BlazeOrange")!

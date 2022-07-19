@@ -164,7 +164,7 @@ class PostCell: UITableViewCell {
 			self.importantLabel.topAnchor.constraint(equalTo: self.wrapper.topAnchor, constant: 4),
 			self.wrapper.bottomAnchor.constraint(greaterThanOrEqualTo: self.importantLabel.bottomAnchor, constant: 4),
 			self.importantLabel.leadingAnchor.constraint(equalTo: self.wrapper.leadingAnchor, constant: 4),
-			self.wrapper.trailingAnchor.constraint(greaterThanOrEqualTo: self.importantLabel.trailingAnchor, constant: 4),
+			self.wrapper.trailingAnchor.constraint(greaterThanOrEqualTo: self.importantLabel.trailingAnchor, constant: 4)
 		])
 	}
 	

@@ -17,7 +17,7 @@ class PaddingLabel: UILabel {
 	var traillingInset: CGFloat = 0
 	
 	// MARK: - Variables
-	override open var intrinsicContentSize: CGSize {
+	override var intrinsicContentSize: CGSize {
 		var intrinsicSuperViewContentSize = super.intrinsicContentSize
 		intrinsicSuperViewContentSize.height += self.topInset + self.bottomInset
 		intrinsicSuperViewContentSize.width += self.leadingInset + self.traillingInset

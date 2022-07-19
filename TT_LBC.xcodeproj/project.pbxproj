@@ -11,9 +11,9 @@
 		533E4E28287F0E3C00E7D112 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E27287F0E3C00E7D112 /* SceneDelegate.swift */; };
 		533E4E2F287F0E3D00E7D112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533E4E2E287F0E3D00E7D112 /* Assets.xcassets */; };
 		533E4E32287F0E3D00E7D112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533E4E30287F0E3D00E7D112 /* LaunchScreen.storyboard */; };
-		533E4E3D287F0E3D00E7D112 /* TT_LBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E3C287F0E3D00E7D112 /* TT_LBCTests.swift */; };
-		533E4E47287F0E3D00E7D112 /* TT_LBCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E46287F0E3D00E7D112 /* TT_LBCUITests.swift */; };
-		533E4E49287F0E3D00E7D112 /* TT_LBCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E48287F0E3D00E7D112 /* TT_LBCUITestsLaunchTests.swift */; };
+		533E4E3D287F0E3D00E7D112 /* TTLBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E3C287F0E3D00E7D112 /* TTLBCTests.swift */; };
+		533E4E47287F0E3D00E7D112 /* TTLBCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E46287F0E3D00E7D112 /* TTLBCUITests.swift */; };
+		533E4E49287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E48287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift */; };
 		533E4E62287F19A000E7D112 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E5D287F19A000E7D112 /* BaseViewController.swift */; };
 		533E4E63287F19A000E7D112 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E5E287F19A000E7D112 /* ViewModel.swift */; };
 		533E4E64287F19A000E7D112 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E5F287F19A000E7D112 /* Interactor.swift */; };
@@ -68,10 +68,10 @@
 		533E4E31287F0E3D00E7D112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		533E4E33287F0E3D00E7D112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		533E4E38287F0E3D00E7D112 /* TT_LBCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TT_LBCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		533E4E3C287F0E3D00E7D112 /* TT_LBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TT_LBCTests.swift; sourceTree = "<group>"; };
+		533E4E3C287F0E3D00E7D112 /* TTLBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLBCTests.swift; sourceTree = "<group>"; };
 		533E4E42287F0E3D00E7D112 /* TT_LBCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TT_LBCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		533E4E46287F0E3D00E7D112 /* TT_LBCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TT_LBCUITests.swift; sourceTree = "<group>"; };
-		533E4E48287F0E3D00E7D112 /* TT_LBCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TT_LBCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		533E4E46287F0E3D00E7D112 /* TTLBCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLBCUITests.swift; sourceTree = "<group>"; };
+		533E4E48287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLBCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		533E4E5D287F19A000E7D112 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		533E4E5E287F19A000E7D112 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		533E4E5F287F19A000E7D112 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		533E4E3B287F0E3D00E7D112 /* TT_LBCTests */ = {
 			isa = PBXGroup;
 			children = (
-				533E4E3C287F0E3D00E7D112 /* TT_LBCTests.swift */,
+				533E4E3C287F0E3D00E7D112 /* TTLBCTests.swift */,
 			);
 			path = TT_LBCTests;
 			sourceTree = "<group>";
@@ -170,8 +170,8 @@
 		533E4E45287F0E3D00E7D112 /* TT_LBCUITests */ = {
 			isa = PBXGroup;
 			children = (
-				533E4E46287F0E3D00E7D112 /* TT_LBCUITests.swift */,
-				533E4E48287F0E3D00E7D112 /* TT_LBCUITestsLaunchTests.swift */,
+				533E4E46287F0E3D00E7D112 /* TTLBCUITests.swift */,
+				533E4E48287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift */,
 			);
 			path = TT_LBCUITests;
 			sourceTree = "<group>";
@@ -305,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 533E4E4C287F0E3D00E7D112 /* Build configuration list for PBXNativeTarget "TT_LBC" */;
 			buildPhases = (
+				53AAD3D12886A0AC005A1284 /* Swiftlint */,
 				533E4E1E287F0E3C00E7D112 /* Sources */,
 				533E4E1F287F0E3C00E7D112 /* Frameworks */,
 				533E4E20287F0E3C00E7D112 /* Resources */,
@@ -423,6 +424,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53AAD3D12886A0AC005A1284 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint; then\n    swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		533E4E1E287F0E3C00E7D112 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -464,7 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				533E4E3D287F0E3D00E7D112 /* TT_LBCTests.swift in Sources */,
+				533E4E3D287F0E3D00E7D112 /* TTLBCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,8 +494,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				533E4E49287F0E3D00E7D112 /* TT_LBCUITestsLaunchTests.swift in Sources */,
-				533E4E47287F0E3D00E7D112 /* TT_LBCUITests.swift in Sources */,
+				533E4E49287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift in Sources */,
+				533E4E47287F0E3D00E7D112 /* TTLBCUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
