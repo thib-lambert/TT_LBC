@@ -5,10 +5,10 @@
 
 class PostDetailsPresenter: Presenter<PostDetailsViewModel> {
 	
-	func display(post: Post, in category: String) {
-		self.viewModel?.category = category
+	func display(post: Post, category: Category?) {
+		self.viewModel?.category = category?.name ?? "-"
 		self.viewModel?.title = post.title
-		self.viewModel?.description = post.description
+		self.viewModel?.description = post.postDescription
 		self.viewModel?.price = post.price.toPrice(currency: "€")
 		self.viewModel?.image = post.imageUrl
 		self.viewModel?.creationDate = post.creationDate

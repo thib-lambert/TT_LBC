@@ -17,4 +17,8 @@ struct CategoriesWorker {
 		
 		return categories
 	}
+	
+	func fetch(for categoryId: Int) -> Category? {
+		UserDefaultsManager.shared.categories.first { $0.id == categoryId }
+	}
 }

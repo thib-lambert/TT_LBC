@@ -12,7 +12,7 @@ protocol Post {
 	var id: Int { get }
 	var categoryId: Int { get }
 	var title: String { get }
-	var description: String { get }
+	var postDescription: String { get }
 	var price: Double { get }
 	var imageUrl: URL? { get }
 	var creationDate: String? { get }

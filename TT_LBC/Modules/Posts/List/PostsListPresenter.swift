@@ -5,8 +5,7 @@
 
 class PostsListPresenter: Presenter<PostsListViewModel> {
 	
-	func display(categories: [Category],
-				 posts: [Post]) {
+	func display(posts: [Post], categories: [Category]) {
 		self.viewModel?.items = posts.compactMap { post in
 			PostsListViewModel.Item(id: post.id,
 									title: post.title,

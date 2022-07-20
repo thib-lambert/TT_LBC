@@ -19,7 +19,9 @@ struct PostResponse: Codable, Post {
 		
 		case id
 		case categoryId = "category_id"
-		case title, description, price
+		case title
+		case postDescription = "description"
+		case price
 		case images = "images_url"
 		case creationDate = "creation_date"
 		case isUrgent = "is_urgent"
@@ -30,7 +32,7 @@ struct PostResponse: Codable, Post {
 	var id: Int
 	var categoryId: Int
 	var title: String
-	var description: String
+	var postDescription: String
 	var price: Double
 	var creationDate: String?
 	var isUrgent: Bool

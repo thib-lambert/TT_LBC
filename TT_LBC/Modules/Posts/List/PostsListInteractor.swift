@@ -24,8 +24,7 @@ class PostsListInteractor: Interactor
 				async let categories = self.categoriesWorker.fetch()
 				async let posts = self.postsWorker.fetch()
 				
-				try await self.presenter.display(categories: categories,
-									   posts: posts)
+				try await self.presenter.display(posts: posts, categories: categories)
 				
 				if withLoader {
 					self.presenter.display(loader: false)

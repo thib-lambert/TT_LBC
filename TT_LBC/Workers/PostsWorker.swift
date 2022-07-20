@@ -17,4 +17,12 @@ struct PostsWorker {
 		
 		return posts
 	}
+	
+	func fetchLocally() -> [Post] {
+		UserDefaultsManager.shared.posts
+	}
+	
+	func fetch(for postId: Int) -> Post? {
+		UserDefaultsManager.shared.posts.first { $0.id == postId }
+	}
 }
