@@ -94,6 +94,8 @@ class AsyncImageView: UIView {
 					return
 				}
 				
+				try Task.checkCancellation()
+				
 				Log.network(.downloadStart, url: url.absoluteString)
 				
 				let data = try Data(contentsOf: url)
