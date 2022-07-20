@@ -11,8 +11,12 @@ class PostDetailsPresenter: Presenter<PostDetailsViewModel> {
 		self.viewModel?.description = post.postDescription
 		self.viewModel?.price = post.price.toPrice(currency: "€")
 		self.viewModel?.image = post.imageUrl
-		self.viewModel?.creationDate = post.creationDate
 		self.viewModel?.isUrgent = post.isUrgent
+		
+		let postDate = post.creationDate?.toDate()
+		let date = postDate?.toString(format: "dd/MM/yyyy") ?? ""
+		let hours = postDate?.toString(format: "HH:mm") ?? ""
+		self.viewModel?.creationDate = [date, "à", hours].joined(separator: " ")
 		
 		self.viewModel?.send()
 	}
