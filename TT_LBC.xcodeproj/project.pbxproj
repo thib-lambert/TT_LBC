@@ -13,7 +13,6 @@
 		533E4E32287F0E3D00E7D112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533E4E30287F0E3D00E7D112 /* LaunchScreen.storyboard */; };
 		533E4E3D287F0E3D00E7D112 /* TTLBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E3C287F0E3D00E7D112 /* TTLBCTests.swift */; };
 		533E4E47287F0E3D00E7D112 /* TTLBCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E46287F0E3D00E7D112 /* TTLBCUITests.swift */; };
-		533E4E49287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E48287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift */; };
 		533E4E62287F19A000E7D112 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E5D287F19A000E7D112 /* BaseViewController.swift */; };
 		533E4E63287F19A000E7D112 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E5E287F19A000E7D112 /* ViewModel.swift */; };
 		533E4E64287F19A000E7D112 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E4E5F287F19A000E7D112 /* Interactor.swift */; };
@@ -40,6 +39,7 @@
 		539D864C28859B5400E2686A /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864B28859B5400E2686A /* Date+String.swift */; };
 		539D864E2885A60500E2686A /* Double+Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864D2885A60500E2686A /* Double+Price.swift */; };
 		539D86502885B0A900E2686A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539D864F2885B0A900E2686A /* PostCell.swift */; };
+		53A4C23628887FC00017D5B7 /* XCTestCase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4C23428887D980017D5B7 /* XCTestCase+Utils.swift */; };
 		53AAD3D92886A77F005A1284 /* PostDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AAD3D52886A77F005A1284 /* PostDetailsPresenter.swift */; };
 		53AAD3DA2886A77F005A1284 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AAD3D62886A77F005A1284 /* PostDetailsViewController.swift */; };
 		53AAD3DB2886A77F005A1284 /* PostDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AAD3D72886A77F005A1284 /* PostDetailsInteractor.swift */; };
@@ -77,7 +77,6 @@
 		533E4E3C287F0E3D00E7D112 /* TTLBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLBCTests.swift; sourceTree = "<group>"; };
 		533E4E42287F0E3D00E7D112 /* TT_LBCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TT_LBCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		533E4E46287F0E3D00E7D112 /* TTLBCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLBCUITests.swift; sourceTree = "<group>"; };
-		533E4E48287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLBCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		533E4E5D287F19A000E7D112 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		533E4E5E287F19A000E7D112 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		533E4E5F287F19A000E7D112 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -104,6 +103,8 @@
 		539D864B28859B5400E2686A /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		539D864D2885A60500E2686A /* Double+Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Price.swift"; sourceTree = "<group>"; };
 		539D864F2885B0A900E2686A /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		53A4C23228886E140017D5B7 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		53A4C23428887D980017D5B7 /* XCTestCase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Utils.swift"; sourceTree = "<group>"; };
 		53AAD3D52886A77F005A1284 /* PostDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenter.swift; sourceTree = "<group>"; };
 		53AAD3D62886A77F005A1284 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		53AAD3D72886A77F005A1284 /* PostDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsInteractor.swift; sourceTree = "<group>"; };
@@ -182,8 +183,8 @@
 		533E4E45287F0E3D00E7D112 /* TT_LBCUITests */ = {
 			isa = PBXGroup;
 			children = (
+				53A4C23328887D820017D5B7 /* Extensions */,
 				533E4E46287F0E3D00E7D112 /* TTLBCUITests.swift */,
-				533E4E48287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift */,
 			);
 			path = TT_LBCUITests;
 			sourceTree = "<group>";
@@ -191,6 +192,7 @@
 		533E4E58287F174C00E7D112 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				53A4C23228886E140017D5B7 /* TestPlan.xctestplan */,
 				533E4E2E287F0E3D00E7D112 /* Assets.xcassets */,
 				533E4E33287F0E3D00E7D112 /* Info.plist */,
 			);
@@ -315,6 +317,14 @@
 				53AAD3D32886A748005A1284 /* List */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		53A4C23328887D820017D5B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53A4C23428887D980017D5B7 /* XCTestCase+Utils.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		53AAD3D32886A748005A1284 /* List */ = {
@@ -542,7 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				533E4E49287F0E3D00E7D112 /* TTLBCUITestsLaunchTests.swift in Sources */,
+				53A4C23628887FC00017D5B7 /* XCTestCase+Utils.swift in Sources */,
 				533E4E47287F0E3D00E7D112 /* TTLBCUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

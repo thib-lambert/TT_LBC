@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "2FBCCDDB-C9BB-4B39-8ABF-CDBDBFA826C3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "fr",
+    "region" : "FR",
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TT_LBC.xcodeproj",
+        "identifier" : "533E4E37287F0E3D00E7D112",
+        "name" : "TT_LBCTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:TT_LBC.xcodeproj",
+        "identifier" : "533E4E41287F0E3D00E7D112",
+        "name" : "TT_LBCUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

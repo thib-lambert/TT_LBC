@@ -8,4 +8,12 @@
 import XCTest
 @testable import TT_LBC
 
-class TTLBCTests: XCTestCase { }
+class TTLBCTests: XCTestCase {
+	
+	func testDecode() {
+		
+		struct TestDecode: Decodable { }
+		
+		XCTAssertThrowsError(try TestDecode.decode(from: nil))
+	}
+}

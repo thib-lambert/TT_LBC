@@ -23,6 +23,7 @@ class PostsListViewController: BaseViewController
 		tableView.tableFooterView = UIView()
 		tableView.backgroundColor = .clear
 		tableView.register(PostCell.self, forCellReuseIdentifier: PostCell.reuseIdentifier)
+		tableView.accessibilityIdentifier = "PostsListViewController.tableView"
 		
 		return tableView
 	}()

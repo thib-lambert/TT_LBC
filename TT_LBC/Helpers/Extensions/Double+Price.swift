@@ -9,21 +9,11 @@ import Foundation
 
 extension Double {
 	
-	func toPrice(currency: String? = nil) -> String {
+	func toPrice(currency: String) -> String {
 		let numberFormatter = NumberFormatter()
+		numberFormatter.numberStyle = .decimal
 		
-		if let currency: String = currency {
-			numberFormatter.numberStyle = NumberFormatter.Style.decimal
-			if let price: String = numberFormatter.string(from: NSNumber(value: self)) {
-				return "\(price) \(currency)"
-			}
-		} else {
-			numberFormatter.numberStyle = NumberFormatter.Style.currency
-			if let price: String = numberFormatter.string(from: NSNumber(value: self)) {
-				return price
-			}
-		}
-		
-		return ""
+		let price = numberFormatter.string(from: NSNumber(value: self))
+		return "\(price ?? "") \(currency)"
 	}
 }

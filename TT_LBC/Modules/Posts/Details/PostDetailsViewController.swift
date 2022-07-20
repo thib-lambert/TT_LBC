@@ -123,6 +123,7 @@ class PostDetailsViewController: BaseViewController
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.view.accessibilityIdentifier = "PostDetailsViewController"
 		self.interactor.refresh(for: self.postId)
 	}
 	

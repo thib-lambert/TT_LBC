@@ -8,24 +8,45 @@
 import XCTest
 
 class TTLBCUITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        continueAfterFailure = false
+	
+	// MARK: - Variables
+	private var app: XCUIApplication!
+	
+	override func setUpWithError() throws {
+		continueAfterFailure = false
 		
 		try super.setUpWithError()
-    }
-
-    func testExample() throws {
-        let app = XCUIApplication()
-        app.launch()
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+		
+		self.app = XCUIApplication()
+		self.app.launch()
+	}
+	
+	override func tearDownWithError() throws {
+		try super.tearDownWithError()
+		
+		self.app.terminate()
+		self.app = nil
+	}
+	
+	func testVisitApp() {
+		let tableView = self.app.tables["PostsListViewController.tableView"]
+		
+		self.wait(element: tableView,
+				  predicate: XCTestCase.kIsVisiblePredicate,
+				  successCompletion: {
+			let firstCell = tableView.cells.element(boundBy: 0)
+			
+			self.wait(element: firstCell,
+					  predicate: XCTestCase.kIsVisiblePredicate,
+					  successCompletion: {
+				firstCell.tap()
+				self.wait(element: self.app.otherElements["PostDetailsViewController"],
+						  predicate: XCTestCase.kIsVisiblePredicate)
+			}, failCompletion: {
+				XCTFail("PostsListViewController.tableView not contains cells")
+			})
+		}, failCompletion: {
+			XCTFail("PostsListViewController.tableView is not visible")
+		})
+	}
 }
