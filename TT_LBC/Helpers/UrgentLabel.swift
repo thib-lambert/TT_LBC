@@ -28,7 +28,6 @@ class UrgentLabel: PaddingLabel {
 		self.minimumScaleFactor = 0.75
 		self.adjustsFontSizeToFitWidth = true
 		self.textColor = .white
-		self.translatesAutoresizingMaskIntoConstraints = false
 		self.backgroundColor = .blazeOrange
 		self.text = "URGENT"
 		self.topInset = 4

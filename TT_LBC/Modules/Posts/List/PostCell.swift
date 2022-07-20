@@ -78,7 +78,12 @@ class PostCell: UITableViewCell {
 		return label
 	}()
 	
-	private let urgentLabel = UrgentLabel()
+	private lazy var urgentLabel: UrgentLabel = {
+		let label = UrgentLabel()
+		label.translatesAutoresizingMaskIntoConstraints = false
+		
+		return label
+	}()
 	
 	// MARK: - Variables
 	var item: PostsListViewModel.Item! {

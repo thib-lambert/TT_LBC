@@ -15,6 +15,7 @@ class PostDetailsViewController: BaseViewController
 	// MARK: - UI
 	private lazy var scrollView: UIScrollView = {
 		let scrollView = UIScrollView()
+		scrollView.isHidden = true
 		scrollView.translatesAutoresizingMaskIntoConstraints = false
 		
 		return scrollView
@@ -55,7 +56,13 @@ class PostDetailsViewController: BaseViewController
 		return imageView
 	}()
 	
-	private let urgentLabel = UrgentLabel()
+	private lazy var urgentLabel: UrgentLabel = {
+		let label = UrgentLabel()
+		label.isHidden = true
+		label.translatesAutoresizingMaskIntoConstraints = false
+		
+		return label
+	}()
 	
 	private let separator: UIView = {
 		let view = UIView()
@@ -171,6 +178,9 @@ class PostDetailsViewController: BaseViewController
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
+		
+		self.scrollView.isHidden = self.title == nil
+		self.urgentLabel.isHidden = self.title == nil
 		
 		self.title = self.viewModel.title
 		self.asyncImageView.url = self.viewModel.image
