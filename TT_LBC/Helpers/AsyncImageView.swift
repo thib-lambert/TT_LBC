@@ -119,6 +119,8 @@ class AsyncImageView: UIView {
 					task.resume()
 				}
 				
+				guard self.url?.absoluteString == url.absoluteString else { return }
+				
 				self.imageView.image = image
 				self.imageView.isHidden = false
 			} catch {
