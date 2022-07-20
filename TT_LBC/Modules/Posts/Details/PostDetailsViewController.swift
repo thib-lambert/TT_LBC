@@ -183,7 +183,12 @@ class PostDetailsViewController: BaseViewController
 		self.urgentLabel.isHidden = self.title == nil
 		
 		self.title = self.viewModel.title
-		self.asyncImageView.url = self.viewModel.image
+		
+		if self.asyncImageView.url == nil,
+		   let image = self.viewModel.image {
+			self.asyncImageView.url = image
+		}
+		
 		self.titleLabel.text = self.viewModel.title
 		self.priceLabel.text = self.viewModel.price
 		self.categoryLabel.text = self.viewModel.category
