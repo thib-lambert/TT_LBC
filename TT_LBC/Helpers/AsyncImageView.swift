@@ -96,13 +96,33 @@ class AsyncImageView: UIView {
 				
 				try Task.checkCancellation()
 				
-				Log.network(.downloadStart, url: url.absoluteString)
+				let image = try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<UIImage?, Error>) -> Void in
+					let task = URLSession.shared.dataTask(with: url) { data, _, error in
+						if let error = error {
+							continuation.resume(throwing: error)
+							return
+						}
+						
+						guard let data = data else {
+							let error = NetworkError.invalidData
+							
+							Log.network(.error, url: url.absoluteString, error: error)
+							continuation.resume(throwing: error)
+							return
+						}
+						
+						continuation.resume(returning: UIImage(data: data))
+					}
+					
+					task.resume()
+				}
 				
-				let data = try Data(contentsOf: url)
-				self.imageView.image = UIImage(data: data)
+				self.imageView.image = image
 				self.imageView.isHidden = false
 			} catch {
 				Log.error(error)
+				self.imageView.image = nil
+				self.imageView.isHidden = true
 			}
 		}
 	}
