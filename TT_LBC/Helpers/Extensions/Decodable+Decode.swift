@@ -9,10 +9,10 @@ import Foundation
 
 extension Decodable {
 	
-	public static func decode(from data: Any?) throws -> Self {
+	static func decode(from data: Any?) throws -> Self {
 		
 		if let data = data,
-		   let jsonData = (data as? Data) ?? (try? JSONSerialization.data(withJSONObject: data)) {
+		   let jsonData = (data as? Data) {
 			do {
 				let object: Self = try JSONDecoder().decode(Self.self, from: jsonData)
 				return object

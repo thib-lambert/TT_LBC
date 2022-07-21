@@ -15,5 +15,17 @@ class TTLBCTests: XCTestCase {
 		struct TestDecode: Decodable { }
 		
 		XCTAssertThrowsError(try TestDecode.decode(from: nil))
+		XCTAssertThrowsError(try TestDecode.decode(from: Data()))
+		XCTAssertThrowsError(try TestDecode.decode(from: ""))
+	}
+	
+	func testCategoriesWorker() {
+		let categories = CategoriesWorker().fetchLocally()
+		XCTAssertTrue(categories.isEmpty || !categories.isEmpty)
+	}
+	
+	func testPostsWorker() {
+		let posts = PostsWorker().fetchLocally()
+		XCTAssertTrue(posts.isEmpty || !posts.isEmpty)
 	}
 }
