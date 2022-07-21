@@ -161,7 +161,7 @@ class PostDetailsViewController: BaseViewController
 			
 			// StackViewContainer
 			self.stackViewContainer.topAnchor.constraint(equalTo: self.asyncImageView.bottomAnchor, constant: 8),
-			self.stackViewContainer.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor, constant: 4),
+			self.stackViewContainer.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor, constant: -4),
 			self.stackViewContainer.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 12),
 			self.stackViewContainer.trailingAnchor.constraint(equalTo: self.scrollView.trailingAnchor, constant: 12),
 			

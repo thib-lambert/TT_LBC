@@ -9,9 +9,10 @@ import Foundation
 
 extension Double {
 	
-	func toPrice(currency: String) -> String {
+	func toPrice(currency: String, locale: Locale) -> String {
 		let numberFormatter = NumberFormatter()
 		numberFormatter.numberStyle = .decimal
+		numberFormatter.locale = locale
 		
 		let price = numberFormatter.string(from: NSNumber(value: self))
 		return "\(price ?? "") \(currency)"

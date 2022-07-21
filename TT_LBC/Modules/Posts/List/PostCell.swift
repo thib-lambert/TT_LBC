@@ -51,8 +51,8 @@ class PostCell: UITableViewCell {
 	private lazy var titleLabel: UILabel = {
 		let label = UILabel()
 		label.numberOfLines = 2
-		label.font = .boldSystemFont(ofSize: 16)
-		label.minimumScaleFactor = 0.75
+		label.font = .boldSystemFont(ofSize: 14)
+		label.minimumScaleFactor = 0.70
 		label.adjustsFontSizeToFitWidth = true
 		label.textColor = .black
 		label.translatesAutoresizingMaskIntoConstraints = false

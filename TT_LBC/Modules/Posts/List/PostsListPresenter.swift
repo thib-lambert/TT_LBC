@@ -3,6 +3,8 @@
 //  Created by Thibaud Lambert on 18/07/2022.
 //
 
+import Foundation
+
 class PostsListPresenter: Presenter<PostsListViewModel> {
 	
 	func display(posts: [Post], categories: [Category]) {
@@ -20,7 +22,7 @@ class PostsListPresenter: Presenter<PostsListViewModel> {
 										title: post.title,
 										image: post.imageUrl,
 										category: categories.first { $0.id == post.categoryId }?.name ?? "-",
-										price: post.price.toPrice(currency: "€"),
+										price: post.price.toPrice(currency: "€", locale: Locale(identifier: "fr")),
 										isImportant: post.isUrgent)
 			}
 		
