@@ -31,6 +31,10 @@ class PostsListInteractor: Interactor
 				}
 			} catch {
 				Log.error(error)
+				
+				self.presenter.display(posts: self.postsWorker.fetchLocally(),
+									   categories: self.categoriesWorker.fetchLocally())
+				
 				if withLoader {
 					self.presenter.display(loader: false)
 				}

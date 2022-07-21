@@ -18,6 +18,10 @@ struct CategoriesWorker {
 		return categories
 	}
 	
+	func fetchLocally() -> [Category] {
+		UserDefaultsManager.shared.categories
+	}
+	
 	func fetch(for categoryId: Int) -> Category? {
 		UserDefaultsManager.shared.categories.first { $0.id == categoryId }
 	}
