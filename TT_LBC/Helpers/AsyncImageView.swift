@@ -121,6 +121,8 @@ class AsyncImageView: UIView {
 				
 				guard self.url?.absoluteString == url.absoluteString else { return }
 				
+				Log.debug("Image: \(url.absoluteString) downloaded")
+				
 				self.imageView.image = image
 				self.imageView.isHidden = false
 			} catch {
