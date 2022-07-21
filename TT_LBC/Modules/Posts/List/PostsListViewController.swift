@@ -36,6 +36,16 @@ class PostsListViewController: BaseViewController
 		return refresh
 	}()
 	
+	private lazy var emptyLabel: UILabel = {
+		let label = UILabel()
+		label.numberOfLines = 0
+		label.font = .boldSystemFont(ofSize: 16)
+		label.textAlignment = .center
+		label.textColor = .lightSlateGrey
+		
+		return label
+	}()
+	
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -60,6 +70,7 @@ class PostsListViewController: BaseViewController
 	override func setup() {
 		super.setup()
 		
+		self.tableView.backgroundView = self.emptyLabel
 		self.tableView.refreshControl = self.refreshControl
 		
 		self.view.addSubview(self.tableView)
@@ -78,6 +89,7 @@ class PostsListViewController: BaseViewController
 		super.refreshUI()
 		
 		self.refreshControl.endRefreshing()
+		self.emptyLabel.text = self.viewModel.emptyText
 		self.tableView.reloadData()
 	}
 	

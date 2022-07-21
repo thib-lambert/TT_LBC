@@ -18,4 +18,5 @@ class PostsListViewModel: ViewModel {
 	}
 	
 	var items: [Item] = []
+	var emptyText: String?
 }

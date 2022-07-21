@@ -15,7 +15,7 @@ class PostsListPresenter: Presenter<PostsListViewModel> {
 				
 				return firstDate > secondDate
 			}
-			.compactMap { post in
+			.map { post in
 				PostsListViewModel.Item(id: post.id,
 										title: post.title,
 										image: post.imageUrl,
@@ -23,6 +23,10 @@ class PostsListPresenter: Presenter<PostsListViewModel> {
 										price: post.price.toPrice(currency: "€"),
 										isImportant: post.isUrgent)
 			}
+		
+		self.viewModel?.emptyText = (self.viewModel?.items.isEmpty ?? true)
+		? "Aucune annonce.\nGlisser vers le bas pour réessayer !"
+		: nil
 		
 		self.viewModel?.send()
 	}
