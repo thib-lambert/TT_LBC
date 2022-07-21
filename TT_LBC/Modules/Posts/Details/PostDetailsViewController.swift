@@ -43,7 +43,7 @@ class PostDetailsViewController: BaseViewController
 	private lazy var asyncImageView: AsyncImageView = {
 		let imageView = AsyncImageView()
 		imageView.translatesAutoresizingMaskIntoConstraints = false
-		imageView.contentMode = .scaleAspectFill
+		imageView.contentMode = .scaleAspectFit
 		imageView.layer.cornerRadius = 8
 		imageView.layer.masksToBounds = true
 		imageView.layer.maskedCorners = [
