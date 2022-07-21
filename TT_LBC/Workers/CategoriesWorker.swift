@@ -10,7 +10,11 @@ import Foundation
 struct CategoriesWorker {
 	
 	func fetch() async throws -> [Category] {
-		try await APIManager.shared.fetch(type: [CategoryResponse].self,
+		let categories = try await APIManager.shared.fetch(type: [CategoryResponse].self,
 								from: URL( "https://raw.githubusercontent.com/leboncoin/paperclip/master/categories.json"))
+		
+		UserDefaultsManager.shared.categories = categories
+		
+		return categories
 	}
 }

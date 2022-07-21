@@ -10,7 +10,11 @@ import Foundation
 struct PostsWorker {
 	
 	func fetch() async throws -> [Post] {
-		try await APIManager.shared.fetch(type: [PostResponse].self,
+		let posts = try await APIManager.shared.fetch(type: [PostResponse].self,
 								from: URL("https://raw.githubusercontent.com/leboncoin/paperclip/master/listing.json"))
+		
+		UserDefaultsManager.shared.posts = posts
+		
+		return posts
 	}
 }

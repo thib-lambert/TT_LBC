@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct PostResponse: Decodable, Post {
+struct PostResponse: Codable, Post {
 	
-	struct Images: Decodable {
+	struct Images: Codable {
 		
 		let small: String?
 		let thumb: String?
